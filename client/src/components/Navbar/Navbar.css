@@ -1,0 +1,41 @@
+/* CSS for the Navbar */
+.navbar {
+    background-color: #7e7979; /* Background color for the entire navbar */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .nav-options {
+    list-style: none;
+    display: flex;
+    padding: 0;
+  }
+  
+  .nav-options li {
+    margin-right: 20px;
+  }
+  
+  .nav-options li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-options a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Style the links on hover */
+  .nav-options a:hover {
+    color: lightblue;
+  }
+  

@@ -8,8 +8,10 @@
 
 body, html{
   height: 100%;
-  background: var(--dark-color)
-}
+  /* background: var(--dark-color)
+   */
+   background: #f0f0f0;
+  }
 
 * > *{
     font-family: 'Poppins', sans-serif;
@@ -65,7 +67,7 @@ body, html{
 
 .container .btn:hover{
     cursor: pointer;
-    background-color: #f0f0f0;
+    background-color: #dad1d1;
     color: #202020;
 }
 
