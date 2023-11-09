@@ -6,6 +6,10 @@
     align-items: center;
     justify-content: center;
     min-height: 80vh; /* Set the container's height to 100% of the viewport height */
+    
+  }
+  h1{
+    color: black;
   }
   
   .image-container {
@@ -16,9 +20,11 @@
     justify-content: center;
     padding: 20px;
   }
-  
-  .image-container img {
-    max-width: 100%;
-    max-height: 100%;
+  img {
+    width: 100%; /* Make all images the same width */
+  height: auto;
+  max-height: 150px; /* Limit the height to maintain aspect ratio */
+  object-fit: cover; /* Ensure the image fits in the specified dimensions */
+  margin: 10px 0;
   }
   

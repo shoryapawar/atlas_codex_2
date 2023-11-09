@@ -16,9 +16,9 @@ const Navbar = () => {
         <li>
           <Link to="/lesson">Lessons</Link>
         </li>
-        <li>
-          <Link to="/team">Dev Team</Link>
-        </li>
+        {/* <li>
+          <Link to="/Earth">🌏</Link>
+        </li> */}
       </ul>
     </nav>
   );

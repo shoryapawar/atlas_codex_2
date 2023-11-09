@@ -21,17 +21,17 @@ const News = () => {
       });
   }, []);
   return (
-    <>
+    <div >
     <Navbar></Navbar>
-      <div className="article">
+      <div className="page">
          {loading?(<p>
           Loading Please Wait
          </p>):(
-          <div className="article">
+          <div >
             <h1> Space News and Articles</h1>
-            <ul>
+            <ul className="article">
         {articleRes.map((article) => (
-          <div key={article.id} className="card">
+          <div key={article.id} className="news-card">
           {/* <li key={article.id}> */}
             <h2>{article.title}</h2>
             <p>{article.summary}</p>
@@ -49,7 +49,7 @@ const News = () => {
 
       </div>
     
-    </>
+    </div>
   )
 };
 
