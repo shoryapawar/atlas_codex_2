@@ -13,13 +13,14 @@ import {  RouterProvider } from "react-router-dom";
 // import News from "./pages/News";
 // import Team from "./pages/Team";
 import router from "./Routes"
-
+import Menu from "./components/Menu/Menu";
 // react routes//
 
 
 function App() {
   return (
     <>
+      <Menu></Menu>
       <RouterProvider router={router} />
     </>
   );
