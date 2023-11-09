@@ -1,6 +1,6 @@
-/* CSS for the Navbar */
+/* CSS for the Navbar
 .navbar {
-    background-color: #7e7979; /* Background color for the entire navbar */
+    background-color: #7e7979; /* Background color for the entire navbar 
     color: white;
     display: flex;
     justify-content: space-between;
@@ -34,8 +34,73 @@
     font-weight: bold;
   }
   
-  /* Style the links on hover */
+  
   .nav-options a:hover {
     color: lightblue;
   }
-  
+   */
+   /* CSS for the Navbar */
+/* CSS for the Navbar */
+.navbar {
+  background-color: #001f3f; /* Dark space-themed background color */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease; /* Add background color transition */
+}
+
+.navbar:hover {
+  background-color: #003a6e; /* Lighter space-themed background color on hover */
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px; /* Increase font size for the logo */
+}
+
+.nav-options {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.nav-options li {
+  margin-right: 20px;
+}
+
+.nav-options li:last-child {
+  margin-right: 0;
+}
+
+.nav-options a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border: none; /* Remove the link's underline */
+  cursor: pointer;
+}
+
+.nav-options a:hover {
+  color: lightblue;
+  transition: color 0.3s ease; /* Add text color transition on hover */
+}
+
+/* Add space-themed icon to the "News" link */
+.nav-options li:nth-child(1) a::before {
+  content: "🚀"; /* Use a rocket emoji as an icon */
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+/* You can similarly add icons to other links as needed */
+
+/* Increase the margin on the "Dev Team" link for additional space */
+.nav-options li:last-child a {
+  margin-right: 30px; /* Adjust the margin as needed */
+}
+

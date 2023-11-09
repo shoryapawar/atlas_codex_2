@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 //css
-import "./home.css";
+import "./APOD.css";
 
-const Home = () => {
+const APOD = () => {
   // const [imageUrl, setImageUrl] = useState('');
   const [loading, setLoading] = useState(true);
   const [apiResponse, setApiResponse] = useState(null);
@@ -67,4 +67,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default APOD;
