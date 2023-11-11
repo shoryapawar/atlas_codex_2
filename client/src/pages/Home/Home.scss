@@ -9,7 +9,10 @@
     // background-repeat: no-repeat;
     // background-size: cover;
     
-    background-color: rgba(255, 255, 255, 0.4);
+    // background-color: rgba(255, 255, 255, 0.4);
+
+    //trying new colors 
+    background-color:#121212;
     
 }
 
@@ -17,14 +20,18 @@
 .box {
     margin: 20px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 1px solid $soft-bg;
-    background-color: $main-color;
+    // background-color: $main-color;
+    background-color: #121212;
+    color: $soft-color;
+    
 }
 
 .box1 {
     grid-column: span 1;
     grid-row: span 2;
+    background-color: #121212;
 }
 
 .box4 {

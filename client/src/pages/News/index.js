@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-import "./News.css"
-import Navbar from "../../components/Navbar/Navbar";
+import "./News.css";
+// import Navbar from "../../components/Navbar/Navbar";
 
 const News = () => {
   const [loading, setLoading] = useState(true);
@@ -21,36 +21,36 @@ const News = () => {
       });
   }, []);
   return (
-    <div >
-    <Navbar></Navbar>
+    <div>
+      <Navbar></Navbar>
       <div className="page">
-         {loading?(<p>
-          Loading Please Wait
-         </p>):(
-          <div >
+        {loading ? (
+          <p>Loading Please Wait</p>
+        ) : (
+          <div>
             <h1> Space News and Articles</h1>
             <ul className="article">
-        {articleRes.map((article) => (
-          <div key={article.id} className="news-card">
-          {/* <li key={article.id}> */}
-            <h2>{article.title}</h2>
-            <p>{article.summary}</p>
-            <img src={article.image_url} alt={article.title} />
-            <a href={article.url} target="_blank" rel="noopener noreferrer">
-              Read more
-            </a>
-            <p>Source: {article.news_site}</p>
-          {/* </li> */}
+              {articleRes.map((article) => (
+                <div key={article.id} className="news-card">
+                  <h2>{article.title}</h2>
+                  <p>{article.summary}</p>
+                  <img src={article.image_url} alt={article.title} />
+                  <a
+                    href={article.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read more
+                  </a>
+                  <p>Source: {article.news_site}</p>
+                </div>
+              ))}
+            </ul>
           </div>
-        ))}
-      </ul>
-          </div>
-         )}
-
+        )}
       </div>
-    
     </div>
-  )
+  );
 };
 
 export default News;

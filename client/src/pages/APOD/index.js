@@ -1,4 +1,4 @@
-import Navbar from "../../components/Navbar/Navbar";
+// import Navbar from "../../components/Navbar/Navbar";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -33,7 +33,7 @@ const APOD = () => {
 
       <div className="apod">
 
-        <h1>Astronomy Picture of the Day</h1>
+        <h2>Astronomy Picture of the Day</h2>
 
         {loading ? (
           <p>Fetching Data from API...</p>
@@ -54,7 +54,7 @@ const APOD = () => {
               </div>
             ) : (
               <div>
-                <h2>{apiResponse.title}</h2>
+                <h3>{apiResponse.title}</h3>
                 <h5>{apiResponse.date}</h5>
                 <img src={apiResponse.url} alt="APOD" />
               </div>

@@ -1,0 +1,43 @@
+// .astronaut-main{
+//     margin: 50px;
+//    h5{
+//     font-weight: 800;
+//    }
+//    .astronaut-list{
+//     font-size: larger;
+//    }
+// }
+
+
+.astronaut-main {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    padding: 20px;
+  
+    h5 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      color: #64ffda;
+    }
+  
+    .astronaut-list {
+      margin-bottom: 10px;
+  
+      h6 {
+        display: flex;
+        align-items: center;
+  
+        .span {
+          display: inline-block;
+          width: 8px; /* Adjust the size of the dot */
+          height: 8px;
+          background-color: #64ffda; /* Color of the dot */
+          border-radius: 50%;
+          margin-right: 10px; /* Adjust the spacing between the dot and text */
+        }
+      }
+    }
+  }
+  

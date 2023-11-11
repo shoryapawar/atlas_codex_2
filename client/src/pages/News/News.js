@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
-import Navbar from "../../components/Navbar/Navbar";
+// import Navbar from "../../components/Navbar/Navbar";
 import axios from "axios";
 import "./News.css";
 const Newspage = () => {
@@ -27,7 +27,7 @@ const Newspage = () => {
   }, []);
   return (
     <>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
       <div className="page">
         {loading ? (
           <p>Loading Please Wait</p>

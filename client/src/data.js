@@ -19,7 +19,7 @@ export const menu = [
         {
           id: 1,
           title: "News",
-          url: "/users",
+          url: "/news",
           icon: "images/user.svg",
         },
         {
@@ -50,7 +50,7 @@ export const menu = [
         {
           id: 2,
           title: "Quiz",
-          url: "/",
+          url: "/main",
           icon: "images/note.svg",
         },
         {
