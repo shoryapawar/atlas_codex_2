@@ -1,5 +1,4 @@
-
-import {  RouterProvider } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 // import {Route, BrowserRouter as Router, Routes } from "react-router-dom"
 
 // //import components
@@ -12,10 +11,10 @@ import {  RouterProvider } from "react-router-dom";
 // import Lesson from "./pages/Lessons";
 // import News from "./pages/News";
 // import Team from "./pages/Team";
-import router from "./Routes"
-
+import router from "./Routes";
+import "./styles/global.scss";
+// import Layout from "./components/Layout/Layout";
 // react routes//
-
 
 function App() {
   return (

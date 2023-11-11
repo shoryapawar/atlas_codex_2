@@ -29,7 +29,7 @@ const APOD = () => {
 
   return (
     <div>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
 
       <div className="apod">
 
