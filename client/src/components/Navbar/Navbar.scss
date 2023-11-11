@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+.nav{
+    
+    .nav{
+  
+        font-family: "Inter", sans-serif;
+        background-color: $main-bg;
+        color: $main-color;
+        width: 100%;
+          padding: 10px;
+          display: flex;
+      }
+    .logo
+    {
+        display: flex;
+        align-items: center;
+        .icon
+        {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    
+}
