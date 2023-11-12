@@ -16,3 +16,5 @@ export default configureStore({ reducer : rootReducer});
 
 
 /***********specifying initial value to both the reducers  */
+
+
