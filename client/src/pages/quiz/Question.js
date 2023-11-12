@@ -1,37 +1,59 @@
-import { useEffect, useState } from "react";
-import React from 'react';
-import data from "./Data/data";
+import React, { useEffect, useState } from 'react'
 
-export default function Question() {
+
+
+import { useDispatch, useSelector } from 'react-redux';
+
+/**********Custom Hooks ******************/
+import { useFetchQuestion } from "./Hooks/FetchQuestion";
+import { updateResultAction } from './redux/result_reducer';
+
+
+export default function Question( {onChecked}) {
 
     const [checked , setChecked] =  useState(undefined);
 
-    const question = data[0];
-    useEffect(()=>{
-     // console.log(question);
-    })
+    const {trace} = useSelector(state => state.questions);
 
-    function onSelect(){
+
+    const [{ isLoading, apiData, serverError}] = useFetchQuestion() ;
+
+   
+
+    const questions = useSelector(state =>state.questions.queue[state.questions.trace]);
+    const dispatch = useDispatch()
+
+    useEffect(() =>{
+        dispatch(updateResultAction(  {trace , checked} ))
+    } , [dispatch] )
     
-      //console.log('radio button change');
+    function onSelect(i){
+    
+      onChecked(i);
+      setChecked(i);
     }
+
+    if(isLoading) return <h3 className='text-light'> isLoading</h3>
+    if(serverError) return <h3 className='text-light'> {serverError || "Unknown Error"}</h3>
   
     return (
     <div className='questions'>
         <h2 className='text-light'>
-            {question.question}
+
+       
+            {questions?.question}  
         </h2>
 
-        <ul key={question.id}>
+        <ul key={questions?.id}>
            {
-            question.options.map((q , i) =>(
+            questions?.options.map((q , i) =>(
             <li key={i}>
                 <input 
                 type='radio' 
                 value={false} 
                 name='options' 
                 id = {`q${i}-option`}
-                onChange={onSelect()}    
+                onChange={() => onSelect(i)}    
                 />
                 <label className="text-primary" htmlFor={`q${i}-option`}>{q}</label>
                 <div className="check  "></div>
@@ -44,3 +66,17 @@ export default function Question() {
     </div>
   )
 }
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+

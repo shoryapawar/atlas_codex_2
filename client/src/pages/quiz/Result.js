@@ -3,9 +3,21 @@ import  '../.././styles/result.css';
 import "../../styles/default.css";
 import {Link} from 'react-router-dom';
 import  ResultTable from './ResultTable';
+import { useDispatch } from 'react-redux';
+
+/*********importing action ********* */
+import { resetResultAction } from './redux/result_reducer';
+import { resetAllAction } from './redux/question_reducer';
+
+
 export default function Result() {
+    
+   const dispatch = useDispatch() ;
 
    function onRestart(){
+      dispatch(resetAllAction())
+      dispatch(resetResultAction())
+
       console.log('Restarted');
    }
   return (
