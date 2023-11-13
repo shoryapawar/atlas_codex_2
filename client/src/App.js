@@ -13,6 +13,7 @@ import { RouterProvider } from "react-router-dom";
 // import Team from "./pages/Team";
 import router from "./Routes";
 import "./styles/global.scss";
+
 // import Layout from "./components/Layout/Layout";
 // react routes//
 

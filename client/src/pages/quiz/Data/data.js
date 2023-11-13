@@ -51,3 +51,6 @@ export default [
     }
     
 ]
+
+
+export const answers = [2 , 0 , 3 , 0 , 1];

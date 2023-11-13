@@ -11,6 +11,7 @@ import APOD from "./pages/APOD";
 import Newspage from "./pages/News/News";
 import Home from "./pages/Home/Home";
 import Layout from "./components/Layout/Layout";
+import { CheckUserExist } from "./pages/quiz/helper/helper";
 
 const router = createBrowserRouter([
   {
@@ -39,11 +40,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/main/quiz",
-        element: <Quiz></Quiz>,
+        element: <CheckUserExist><Quiz/></CheckUserExist>,
       },
       {
         path: "/main/result",
-        element: <Result></Result>,
+        element: <CheckUserExist><Result/></CheckUserExist>,
       },
     ],
   },
