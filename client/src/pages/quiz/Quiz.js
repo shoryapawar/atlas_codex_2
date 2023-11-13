@@ -20,27 +20,31 @@ export default function Quiz() {
 
   const dispatch = useDispatch();
 
-  useEffect(() =>{
-     console.log(result);
-  })
+  
 
   //**********************next button evenet handler******************************* */
   function onNext(){
-    console.log('on next click');
+    
 
     if(trace < queue.length){
 
       /**************Update the trace value by one using move next action *************** */
        dispatch(MoveNextQuestion());
-       dispatch(PushAnswer(check))
+        /********insert a new result in tthe array************************ */
+       if(result.length <= trace){
+        dispatch(PushAnswer(check));
+       }
+       
     }
     
-    
+    /**************Reset  the value of the checked variable  ****************** */
+
+    setChecked(undefined)
   }
 
    //**********************prev button evenet handler******************************* */
   function onPrev() {
-     console.log('on prev click');
+    
 
      if(trace > 0){
 
@@ -68,7 +72,7 @@ export default function Quiz() {
         {/**************display Question*******************/}
            <Question onChecked = {onChecked}/>
          <div className='grid'> 
-           <button className='btn prev' onClick={onPrev}>Previous</button>
+         { trace > 0 ? <button className='btn prev' onClick={onPrev}>Previous</button> : <div></div>}
            <button className='btn next' onClick={onNext}>Next</button>
 
          </div>
