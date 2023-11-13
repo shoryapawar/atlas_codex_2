@@ -1,8 +1,8 @@
 /* News.css */
 
 .page {
-  /* background-color: #001f3f; Space-themed background color */
-   background-color: #121212;
+  margin: 20px;
+  background-color: #121212;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,6 @@
   color:whitesmoke;
   
 }
-
 .article {
   background-color: #ffffff; /* White background for the news container */
   padding: 20px;
@@ -21,7 +20,7 @@
   max-width: 1200px;
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Display cards in three columns */
+  grid-template-columns: repeat(3 , 1fr); /* Display cards in three columns */
   grid-gap: 20px; /* Adjust the gap between cards */
 }
 
@@ -40,7 +39,8 @@
   transform: scale(1.05); /* Scale up on hover for animation */
 }
 
-.news-card h2 {
+
+/* .news-card h2 {
   font-size: 1.25rem;
   margin: 0;
 }
@@ -50,19 +50,56 @@
 }
 
 .news-card img {
-  width: 100%; /* Make all images the same width */
+  width: 100%; 
   height: auto;
-  max-height: 150px; /* Limit the height to maintain aspect ratio */
-  object-fit: cover; /* Ensure the image fits in the specified dimensions */
+  max-height: 150px; 
+  object-fit: cover; 
   margin: 10px 0;
 }
-
-.news-card a {
-  color: #ff4136; /* Link color */
+*/
+/* .news-card a {
+  color: #ff4136;
   text-decoration: none;
   font-weight: bold;
 }
 
 .news-card a:hover {
   text-decoration: underline;
+}  */
+
+
+/*  Search box */
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 8px 12px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.search-box input::placeholder {
+  color: #999;
+}
+
+.search-box input:focus {
+  border-color: #191c1e; /* Change border color on focus */
+}
+
+.search-box button {
+  background-color:  #9bd8f2;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+  background-color:#56e4e4; /* Darker color on hover */
 }

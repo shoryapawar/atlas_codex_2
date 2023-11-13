@@ -1,11 +1,11 @@
-import React from 'react'
 
+import "./Navbar.scss"
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <div className="nav">
       <div className="logo">
-        {/* <img className="icon" src="../../../public/images/logo.svg" alt="djc"></img> */}
-        <span>Atlas_Codex</span>
+        <img className="icon" src="images/2.png" alt="Okay"></img>
+        {/* <span>Atlas_Codex</span> */}
       </div>
     </div>
   )

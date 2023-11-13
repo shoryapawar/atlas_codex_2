@@ -10,23 +10,31 @@ import axios from "axios";
 import "./News.css";
 // gsap
 import { gsap } from "gsap";
-
 const Newspage = () => {
   const [loading, setLoading] = useState(true);
   const [articleRes, setartcileRes] = useState(null);
+  const [search, setSearch] = useState("");
+  //   https://api.spaceflightnewsapi.net/v4/articles/?title_contains=&title_contains_one=&title_contains_all=&summary_contains_one=&summary_contains_all=&news_site=&summary_contains=spacex&published_at_gte=&published_at_lte=&published_at_gt=&published_at_lt=&updated_at_gte=&updated_at_lte=&updated_at_gt=&updated_at_lt=&launch=&event=&has_launch=unknown&has_event=unknown
 
   useEffect(() => {
     axios
-      .get("https://api.spaceflightnewsapi.net/v4/articles/?limit=12")
+      .get(
+        `https://api.spaceflightnewsapi.net/v4/articles/?limit=17&summary_contains=${search}`
+      )
       .then((res) => {
-        setartcileRes(res.data.results);
+        //filtering data
+        const filteredArticles = res.data.results.filter(
+          (article) => article.news_site !== "NASASpaceflight"
+        );
+
+        setartcileRes(filteredArticles);
         setLoading(false);
       })
       .catch((error) => {
         console.log("Error fetching data", error);
         setLoading(false);
       });
-  }, []);
+  }, [search]);
 
   // gsap code
   const el = useRef();
@@ -34,34 +42,39 @@ const Newspage = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      tl.current = gsap
-        .timeline()
-        .from(".article", {
-          x: -800,
-          opacity: 0,
-          duration: 1,
-          delay: 1,
-        })
-        .from(".card", {
-          yoyoEase: true,
-          opacity: 0.4,
-          duration: 0.3,
-          delay: 0.8,
-        });
+      tl.current = gsap.timeline().from(".article", {
+        y:-800,
+        x:100,
+        scale:0,
+        opacity: 0,
+        duration: 0.8,
+        delay: 0.3,
+      });
     }, el);
   }, [loading]);
 
   return (
     <>
-      <div className="page">
+      <div className="page" ref={el}>
         {loading ? (
-          <p>Loading Please Wait</p>
+          <p className="loading">Loading....</p>
         ) : (
           <div>
-            <h1 style={{ color: "white" }}> Space News and Articles</h1>
-            <ul className="article">
+            <h1 style={{ color: "white" }}> Space News and Articles </h1>
+
+            <div className="search-box">
+              <input
+                type="text"
+                placeholder="Search..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+              <button onClick={() => setSearch("")}> Clear Search </button>
+            </div>
+  
+            <div className="article" >
               {articleRes.map((article) => (
-                <div key={article.id} className="card">
+                <div key={article.id} className="news-card">
                   <Card sx={{ maxWidth: 345 }}>
                     <CardMedia
                       sx={{ height: 140 }}
@@ -90,7 +103,7 @@ const Newspage = () => {
                   </Card>
                 </div>
               ))}
-            </ul>
+            </div>
           </div>
         )}
       </div>

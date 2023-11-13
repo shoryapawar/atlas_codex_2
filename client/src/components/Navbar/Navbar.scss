@@ -7,7 +7,7 @@
         font-family: "Inter", sans-serif;
         background-color: $main-bg;
         color: $main-color;
-        width: 100%;
+        // width: 100%;
           padding: 10px;
           display: flex;
       }
@@ -15,10 +15,12 @@
     {
         display: flex;
         align-items: center;
+        
         .icon
         {
-            display: flex;
-            align-items: center;
+            // display: flex;
+            // align-items: center; 
+           
         }
     }
 
