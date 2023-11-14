@@ -12,6 +12,7 @@ import Newspage from "./pages/News/News";
 import Home from "./pages/Home/Home";
 import Layout from "./components/Layout/Layout";
 import { CheckUserExist } from "./pages/quiz/helper/helper";
+import Solar from "./pages/Solar_system/Solar";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "/main/result",
         element: <CheckUserExist><Result/></CheckUserExist>,
+      },
+      {
+        path: "/solar",
+        element: <Solar/>,
       },
     ],
   },

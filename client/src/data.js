@@ -42,7 +42,7 @@ export const menu = [
       {
         id: 3,
         title: "Solar System",
-        url: "/",
+        url: "/solar",
         icon: "images/solar.png",
       },
     ],
@@ -60,3 +60,43 @@ export const menu = [
     ],
   },
 ];
+
+export const scientist = [
+  {
+    id: 1,
+    // name: "Jasmin Moghbeli",
+    img: "images/scientist/1.webp"
+  },
+  {
+    id: 2,
+    // name: "Jasmin Moghbeli",
+    img: "images/scientist/1.webp"
+  },
+  {
+    id: 3,
+    // name: "Jasmin Moghbeli",
+    img: "images/scientist/1.webp"
+  },
+  {
+    id: 4,
+    // name: "Jasmin Moghbeli",
+    img: "images/scientist/1.webp"
+  },
+  {
+    id: 5,
+    // name: "Jasmin Moghbeli",
+    img: "images/scientist/1.webp"
+  },
+  {
+    id: 6,
+    // name: "Jasmin Moghbeli",
+    img: "images/scientist/1.webp"
+  },
+  {
+    id: 7,
+    // name: "Jasmin Moghbeli",
+    img: "images/scientist/1.webp"
+  },
+ 
+]
+
