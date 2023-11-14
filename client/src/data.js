@@ -30,7 +30,7 @@ export const menu = [
       {
         id: 1,
         title: "Lessons",
-        url: "/",
+        url: "/lesson",
         icon: "images/lessons.png",
       },
       {

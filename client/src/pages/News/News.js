@@ -43,9 +43,9 @@ const Newspage = () => {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       tl.current = gsap.timeline().from(".article", {
-        y:-800,
-        x:100,
-        scale:0,
+        y: -800,
+        x: 100,
+        scale: 0,
         opacity: 0,
         duration: 0.8,
         delay: 0.3,
@@ -71,8 +71,8 @@ const Newspage = () => {
               />
               <button onClick={() => setSearch("")}> Clear Search </button>
             </div>
-  
-            <div className="article" >
+
+            <div className="article">
               {articleRes.map((article) => (
                 <div key={article.id} className="news-card">
                   <Card sx={{ maxWidth: 345 }}>
