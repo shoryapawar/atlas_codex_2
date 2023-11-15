@@ -2,7 +2,7 @@
 
 .page {
   margin: 20px;
-  background-color: #121212;
+  /* background-color: #121212; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
   
 }
 .article {
-  background-color: #ffffff; /* White background for the news container */
+   /* background-color: #ffffff;  */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -22,17 +22,19 @@
   display: grid;
   grid-template-columns: repeat(3 , 1fr); /* Display cards in three columns */
   grid-gap: 20px; /* Adjust the gap between cards */
+
 }
 
 .news-card {
   padding: 20px;
-  background-color: #001f3f; /* Space-themed card background */
+  /* background-color: rgb(0, 31, 63);  */
   color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
   overflow: hidden;
+  /* border-radius: 20%; */
 }
 
 .news-card:hover {

@@ -28,15 +28,15 @@ a {
  }
 
 
-.nav{
+// .nav{
   
-  font-family: "Inter", sans-serif;
-  background-color: $main-bg;
-  color: $main-color;
-  width: 100%;
-    padding: 10px;
-    display: flex;
-}
+//   font-family: "Inter", sans-serif;
+//   background-color: $main-bg;
+//   color: $main-color;
+//   width: 100%;
+//   padding: 10px;
+//   display: flex;
+// }
 
 .content{
   display: flex;
@@ -52,7 +52,7 @@ a {
   .menu-content{
     font-family: "Inter", sans-serif;
     // background-color: $main-bg;
-    background-color: rgb(18, 18, 18,0.4);
+    background-color: rgb(18, 18, 18,0.2);
     // opacity: 0.4;
     color: $main-color;
     width: 250px;
