@@ -4,6 +4,7 @@
   --primary-color: #0DFF92;
   --dark-color:#222222;
   --light-color: #f0f0f0;
+  
 }
 
 body, html{
@@ -22,7 +23,7 @@ body, html{
   height: auto;
   width: 800px;
   padding: 20px;
- 
+  min-height: 100vh;
 }
 
 .container .title{
