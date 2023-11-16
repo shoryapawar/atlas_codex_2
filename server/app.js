@@ -2,6 +2,7 @@ import express from "express";
 import { config } from "dotenv";
 import cors from "cors";
 import nasaroutes from "./routes/nasa.js"
+import router from "./routes/quiz_routes.js";
 
 export const app = express();
 
@@ -25,6 +26,7 @@ app.use(
 
 //routes
 app.use("/api/nasa",nasaroutes);
+app.use("/api/quiz" , router);
 
 //home route
 app.get("/", (req, res) => {
