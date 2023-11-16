@@ -4,6 +4,8 @@ import cors from "cors";
 import nasaroutes from "./routes/nasa.js"
 import router from "./routes/quiz_routes.js";
 
+
+
 export const app = express();
 
 config({
@@ -23,6 +25,8 @@ app.use(
     credentials: true,
   })
 );
+
+
 
 //routes
 app.use("/api/nasa",nasaroutes);
