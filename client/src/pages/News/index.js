@@ -22,7 +22,7 @@ const News = () => {
   }, []);
   return (
     <div>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
       <div className="page">
         {loading ? (
           <p>Loading Please Wait</p>

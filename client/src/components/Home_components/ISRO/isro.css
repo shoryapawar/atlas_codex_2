@@ -1,4 +1,4 @@
-.isro {
+/* .isro {
   text-align: center;
   font-family: "Orbitron", sans-serif;
   background-color: #121212;
@@ -21,6 +21,103 @@
     h6 {
       display: flex;
       align-items: center;
+    }
+  }
+} */
+/*
+ .isro {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  padding: 20px;
+  height: 20px;
+
+  h5 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #64ffda;
+  }
+
+  .launch-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    h6 {
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        color: #00ff00; 
+        font-weight: bold;
+      }
+    }
+  }
+
+  button {
+    background-color: #64ffda;
+    color: #121212;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #00bfa5;
+    }
+  }
+} */
+.isro {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  padding: 20px;
+
+  h4 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #faf8eb; /* Space theme color */
+  }
+
+  .launch-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    h5 {
+      font-size: 1.5em;
+    }
+
+    h6 {
+      font-size: 1em;
+      color: #ffffff;
+    }
+
+    p {
+      color: #00ff00; /* Green color for the p tag */
+    }
+
+    button {
+      background-color: #64ffda;
+      color: #121212;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #00bfa5; /* Hover effect color */
+      }
+
+      a {
+        text-decoration: none;
+        color: #121212;
+      }
     }
   }
 }
