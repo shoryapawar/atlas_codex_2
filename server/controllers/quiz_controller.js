@@ -1,6 +1,6 @@
 
 import Questions from "../models/quizModels/questionSchema.js";
-import Result from "../models/quizModels/resultSchema.js";
+import Results from "../models/quizModels/resultSchema.js";
 import questions , {answers} from "../database/data.js"
 
 
@@ -42,16 +42,38 @@ export const deleteQuestions = async(req , res) =>{
 
 /*************get all result************************** */
 export const getResult = async(req, res) => {
-    res.json("result api get request");
+    try{
+      const r = await Results.find();
+      res.json(r);
+
+    }catch(error){
+        res.json({error});
+    }
 }
 
 /****************** Insert all Result **************** */
 export const insertResult = async(req , res) => {
-    res.json("Result api post request");
+    try{
+         const {username , result , attempts , points , achieved} = req.body;
+
+         if(!username && !result) throw new Error('Data Not Provided...!');
+
+         Results.create( {username , result , attempts , points , achieved} ).then(function(err , data ){
+               res.json({msg:"Result Saved Successfully...!"});
+         })
+    }catch(error){
+       res.json({error}); 
+    }
 }
 
 /*******************Delete All Result *************** */
 
 export const deleteResult = async(req , res) =>{
-    res.json("Result api delete request");
+   
+    try{
+       await Results.deleteMany();
+       res.json({msg:"Result Deleted Successfully...!"})
+    }catch(error){
+        res.json({error});
+    }
 }

@@ -18,12 +18,14 @@ body, html{
 
 .container{
   display: block;
-  position: relative;
-  margin: 40px auto;
+  position:relative;
+ margin: 40px auto;
   height: auto;
   width: 800px;
   padding: 20px;
   min-height: 100vh;
+  
+  
 }
 
 .container .title{
@@ -32,6 +34,7 @@ body, html{
     border: 5px solid var(--primary-color);
     padding: .3em .2em;
     border-radius: 4px;
+    
 }
 
 .text-light {

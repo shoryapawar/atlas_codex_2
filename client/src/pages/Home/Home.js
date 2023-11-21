@@ -4,6 +4,7 @@ import Astronaut from "../../components/Home_components/Astronaut/Astronaut";
 import APOD from "../../pages/APOD";
 import ISS from "../../components/Home_components/ISS/ISS";
 import ISS2 from "../../components/Home_components/ISS/ISS-2";
+import ISRO from "../../components/Home_components/ISRO";
 const Home = () => {
   return (
     <div className="home">
@@ -11,7 +12,7 @@ const Home = () => {
         <Astronaut />
       </div>
       <div className="box box2">
-        <ISS />
+      <ISRO/>
       </div>
       <div className="box box3">
         <ISS2/>
@@ -23,7 +24,7 @@ const Home = () => {
       <div className="box box6">box6</div>
       <div className="box box7">box7</div>
       <div className="box box8">box8</div>
-      <div className="box box9">events</div>
+      <div className="box box9"></div>
     </div>
   );
 };
