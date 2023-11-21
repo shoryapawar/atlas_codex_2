@@ -1,23 +1,27 @@
-
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 const ISRO = () => {
   const [launch, setLaunch] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios
-      .get("https://services.isrostats.in/api/launches")
-      .then((response) => {
-        setLaunch(response.data);
-      })
-      .catch((error) => {
-        console.log("Error in fetching data:", error);
-      });
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(
+          "https://services.isrostats.in/api/launches"
+        );
+        setLaunch(res.data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error in ISRO Launch API", error);
+        setLoading(false);
+      }
+    };
+    fetchData();
   }, []);
 
-  // Update the current index every 3 seconds 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % launch.length);
@@ -29,20 +33,27 @@ const ISRO = () => {
 
   return (
     <div className="isro">
-      <h5>ISRO</h5>
-      {launch.length > 0 && (
-        <div className="launch-list">
-          <h6>{launch[currentIndex].Name}</h6>
-          <h6>{launch[currentIndex].LaunchDate}</h6>
-          <h6>{launch[currentIndex].LaunchType}</h6>
-          <h6>{launch[currentIndex].Payload}</h6>
-          <a href =  {launch[currentIndex].Link}  target = "_blank"> <h6>Mission Link</h6> </a>
-          <h6>{launch[currentIndex].MissionStatus}</h6>
-        </div>
+      <h4>ISRO</h4>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        launch.length > 0 && (
+          <div className="launch-list">
+            <h5>Name : {launch[currentIndex].Name}</h5>
+            <h6>Lauch Date : {launch[currentIndex].LaunchDate}</h6>
+            <h6> LaunchType : {launch[currentIndex].LaunchType}</h6>
+            <h6> Payload : {launch[currentIndex].Payload}</h6>
+            <button>
+              <a href={launch[currentIndex].Link} target="_blank" rel="noopener noreferrer">
+                <h6>Mission Link</h6>
+              </a>
+            </button>
+            <p>Mission Status : {launch[currentIndex].MissionStatus}</p>
+          </div>
+        )
       )}
     </div>
   );
-  
 };
 
 export default ISRO;

@@ -14,12 +14,14 @@ const Home = () => {
         <Astronaut />
       </div>
       <div className="box box2">
-      <ISRO/>
+        <ISRO />
       </div>
       <div className="box box3">
-        <ISS2/>
+        <ISS2 />
       </div>
-      <div className="box box4"><Rover></Rover></div>
+      <div className="box box4">
+        <Rover></Rover>
+      </div>
       <div className="box box5">
         <APOD />
       </div>

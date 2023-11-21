@@ -17,7 +17,7 @@ const Astronaut = () => {
   // console.log(astronauts);
   return (
     <div className="astronaut-main">
-    <h5>Astronauts in Space</h5>
+    <h5>Astronauts in Space Station</h5>
     {/* <img className="icon" src="images/astronaut.png" alt="h"></img> */}
       {astronauts.map((astronaut) => (
         <div  className="astronaut-list">
