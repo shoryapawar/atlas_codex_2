@@ -6,12 +6,14 @@ import APOD from "../../pages/APOD";
 import ISS2 from "../../components/Home_components/ISS/ISS-2";
 import ISRO from "../../components/Home_components/ISRO";
 import Rover from "../../components/Home_components/Rover";
-
+import Tilt from 'react-parallax-tilt';
+import { Parallax } from "react-parallax";
 const Home = () => {
   return (
     <div className="home">
       <div className="box box1">
-        <Astronaut />
+        <Tilt><Astronaut /></Tilt>
+        
       </div>
       <div className="box box2">
         <ISRO />
@@ -27,8 +29,8 @@ const Home = () => {
       </div>
       <div className="box box6">box6</div>
       <div className="box box7">box7</div>
-      <div className="box box8">box8</div>
-      <div className="box box9"></div>
+      {/* <div className="box box8">box8</div> */}
+      {/* <div className="box box9"></div> */}
     </div>
   );
 };
