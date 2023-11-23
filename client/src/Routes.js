@@ -13,6 +13,7 @@ import Home from "./pages/Home/Home";
 import Layout from "./components/Layout/Layout";
 import { CheckUserExist } from "./pages/quiz/helper/helper";
 import Solar from "./pages/Solar_system/Solar";
+import AboutUS from "./pages/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -41,15 +42,27 @@ const router = createBrowserRouter([
       },
       {
         path: "/main/quiz",
-        element: <CheckUserExist><Quiz/></CheckUserExist>,
+        element: (
+          <CheckUserExist>
+            <Quiz />
+          </CheckUserExist>
+        ),
       },
       {
         path: "/main/result",
-        element: <CheckUserExist><Result/></CheckUserExist>,
+        element: (
+          <CheckUserExist>
+            <Result />
+          </CheckUserExist>
+        ),
       },
       {
         path: "/solar",
-        element: <Solar/>,
+        element: <Solar />,
+      },
+      {
+        path: "/about",
+        element: <AboutUS />,
       },
     ],
   },

@@ -54,7 +54,7 @@ export const menu = [
       {
         id: 1,
         title: "About Us",
-        url: "/",
+        url: "/about",
         icon: "images/team.png",
       },
     ],

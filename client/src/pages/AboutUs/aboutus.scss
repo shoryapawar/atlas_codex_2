@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+.about-main{
+  min-height: 100vh;
+  
+
+}
+
+.member{
+    display: flex ;
+    color: white;
+    border: 1px solid black;
+    margin: 20px;
+    background-color: $dark-bg;
+    gap: 10px;
+    align-items: center;
+    border-radius: 10px;
+    img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+}
