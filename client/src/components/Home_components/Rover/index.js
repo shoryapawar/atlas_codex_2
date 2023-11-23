@@ -22,10 +22,10 @@ const Rover = () => {
         console.error("Error fetching maxSol", error);
       }
     };
-
+      
     fetchMaxSol();
   }, [selectedRover]);
-
+  //  console.log(maxSol);
   const fetchData = async () => {
     try {
       const response = await axios.get(

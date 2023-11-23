@@ -1,0 +1,34 @@
+.spacex-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .upper-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    padding: 20px;
+  }
+  
+  .image-container img {
+    max-width: 100px;
+  }
+  
+  .links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .link {
+    font-size: px; /* Adjust the font size as needed */
+    color: #7f1616; /* Adjust the color as needed */
+  }
+  
+  .yt {
+    margin-top: 20px;
+  }
+  
