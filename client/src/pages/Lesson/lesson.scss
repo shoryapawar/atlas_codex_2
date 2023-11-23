@@ -1,0 +1,74 @@
+// .lesson-main {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   width: auto;
+//   color: white;
+//   h1{
+//     text-align: left;
+//   }
+// }
+
+// .lesson {
+//   max-width: 1000px; /* Adjust the maximum width as needed */
+//   margin: 20px;
+//   padding: 20px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   h1 {
+//     margin-top: 2rem;
+//     margin-bottom: 10px;
+//   }
+
+//   h3 {
+//     margin-bottom: 15rem;
+//     line-height: 1.5; /* Adjust line height for better readability */
+//   }
+
+//   img {
+//     max-width: 100%;
+//     margin-bottom: 10px;
+//   }
+// }
+.lesson-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin-left: 5rem;
+   color: antiquewhite;
+  h1 {
+    text-align: left;
+    margin: 3rem 4rem; 
+    font-weight: bolder;
+    text-transform:uppercase;
+  }
+}
+
+.lesson {
+  max-width: 1000px; /* Adjust the maximum width as needed */
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #64ffda;
+  }
+
+  h3 {
+    margin-top: 1rem;
+    margin-bottom: 15rem;
+    line-height: 1.5; /* Adjust line height for better readability */
+  }
+
+  img {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+}
