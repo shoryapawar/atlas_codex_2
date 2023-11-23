@@ -38,7 +38,7 @@ const IsroSpaceCraft = () => {
       {loading ? (
         <div className="laoding">Loading Please wait</div>
       ) : (
-        isrospacecraft.length > 0 && (
+        isrospacecraft?.length > 0 && (
           <div className="spacecraft-list">
             <h2>Spacecraft - {isrospacecraft[currentIndex]?.name}</h2>
             <h4>Launch Vechile - {isrospacecraft[currentIndex]?.launchVehicle}</h4>
