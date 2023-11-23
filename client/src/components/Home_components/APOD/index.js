@@ -31,11 +31,13 @@ const APOD = () => {
       {/* <Navbar></Navbar> */}
 
       <div className="apod">
+      <div className="title-content">
 
-        <h2>Astronomy Picture of the Day</h2>
+      </div>
+        <h2 style={{ "margin": "30px" }}>Astronomy Picture of the Day</h2>
 
         {loading ? (
-          <p>Fetching Data from API...</p>
+          <p style={{ "margin": "30px" }}>Fetching Data from API...</p>
         ) : (
           <div>
             {apiResponse?.media_type === "video" ? (
