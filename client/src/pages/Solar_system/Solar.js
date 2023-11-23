@@ -16,11 +16,9 @@ const Solar = () => {
         <br/>
         <p>Our solar system is the only one we know of that has a planet that supports life. So far, we only know of life on Earth, but we’re looking for life on other worlds.</p>
         </div>
-        {/* <div className='the-sun'>
-          <img src='images/Space/sun.jpg'></img> 
-        </div> */}
+       
         <div className='solar-system-gif'>
-          {/* <img className='solar-system-gif1' src='images/Space/solar-system-gif2.gif'></img> */}
+         
           <img src='images/Space/solar-system-4.gif'></img>
         </div>
         <div className='solar-cards'>

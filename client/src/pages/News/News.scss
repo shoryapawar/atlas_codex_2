@@ -1,4 +1,5 @@
 /* News.css */
+@import '../../styles/responsive.scss';
 
 .page {
   margin: 20px;
@@ -22,6 +23,16 @@
   display: grid;
   grid-template-columns: repeat(3 , 1fr); /* Display cards in three columns */
   grid-gap: 20px; /* Adjust the gap between cards */
+  grid-auto-flow: dense;
+  @include lg{
+    grid-template-columns: repeat(2 , 1fr);
+    
+  }
+
+  @include md{
+    grid-template-columns: repeat(1 , 1fr);
+    
+  }
 
 }
 

@@ -63,6 +63,11 @@ a {
     border-right: 2px solid $soft-bg;
     display: flex;
     // height: 100%;
+
+    @include xl{
+      margin-top: 150px;
+  }
+  
   }
 
   // .main{

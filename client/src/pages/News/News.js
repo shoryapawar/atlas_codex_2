@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useEffect, useState, useLayoutEffect, useRef } from "react";
 import axios from "axios";
-import "./News.css";
+import "./News.scss";
 // gsap
 import { gsap } from "gsap";
 const Newspage = () => {

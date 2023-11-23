@@ -12,17 +12,17 @@
         margin-top: 25px;
         // align-items: center;
 
+        
+
         .title{
             align-items: center;
             font-size: 15px;
             font-weight: 500;
             color: $soft-color;
 
-            @include lg{
-                font-size: 12px;
-            }
+            
     
-            @include md{
+            @include xl{
                 display: none;
             }
     
@@ -43,8 +43,15 @@
              display: block;
             //  margin: 0 auto;
 
+            @include lg{
+                width: 50px;
+             height: auto; 
+            }
+            
+
             @include sm{
-                width: 10px;
+                // margin-top: 50px;
+                width: 25px;
             //  height: auto; 
             }
             }
@@ -58,11 +65,11 @@
     
             .listitemTitle{
 
-                @include lg{
-                    font-size: 12px;
-                }
+                // @include lg{
+                //     font-size: 12px;
+                // }
 
-                @include md{
+                @include xl{
                     display: none;
                 }
     
