@@ -39,14 +39,14 @@ const APOD = () => {
           <p>Fetching Data from API...</p>
         ) : (
           <div>
-            {apiResponse.media_type === "video" ? (
+            {apiResponse?.media_type === "video" ? (
               <div>
-                <h3>{apiResponse.title}</h3>
-                <h5>{apiResponse.date}</h5>
+                <h3>{apiResponse?.title}</h3>
+                <h5>{apiResponse?.date}</h5>
                 <iframe
                   width="560"
                   height="315"
-                  src={apiResponse.url} // Assuming content contains the YouTube video link
+                  src={apiResponse?.url} // Assuming content contains the YouTube video link
                   title="YouTube Video"
                   allow="autoplay; encrypted-media"
                   allowFullScreen
@@ -54,9 +54,9 @@ const APOD = () => {
               </div>
             ) : (
               <div>
-                <h3>{apiResponse.title}</h3>
-                <h5>{apiResponse.date}</h5>
-                <img src={apiResponse.url} alt="APOD" />
+                <h3>{apiResponse?.title}</h3>
+                <h5>{apiResponse?.date}</h5>
+                <img src={apiResponse?.url} alt="APOD" />
               </div>
             )}
           </div>

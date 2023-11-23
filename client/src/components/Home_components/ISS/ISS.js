@@ -26,8 +26,8 @@ const ISS = () => {
       ) :(
         <div className="ISS-main">
         <h5>About ISS</h5>
-        <h6>Longitude:{cord.iss_position.longitude}°</h6>
-        <h6>Latitude:{cord.iss_position.latitude}°</h6>
+        <h6>Longitude:{cord.iss_position?.longitude}°</h6>
+        <h6>Latitude:{cord.iss_position?.latitude}°</h6>
       </div>
       )}
     </>

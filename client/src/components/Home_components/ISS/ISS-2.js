@@ -4,38 +4,44 @@ import React, { useEffect, useState } from "react";
 const ISS2 = () => {
   const [cord, setCord] = useState(null);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    axios
-      .get('https://api.wheretheiss.at/v1/satellites/25544')
-      .then((res) => {
-        setCord(res.data);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://api.wheretheiss.at/v1/satellites/25544");
+        const roundedCord = {
+          longitude: Math.round(response.data.longitude),
+          latitude: Math.round(response.data.latitude),
+          velocity: Math.round(response.data.velocity),
+          altitude: Math.round(response.data.altitude),
+          visibility: response.data.visibility, // Assuming visibility is not a number
+        };
+        setCord(roundedCord);
         setLoading(false);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error("Error in ISS2 API", error);
         setLoading(false);
-      });
+      }
+    };
+
+    fetchData();
   }, []);
-  console.log(cord);
 
   return (
-
     <>
-    {loading ? (
+      {loading ? (
         <p>Loading..</p>
-      ) :(
+      ) : (
         <div className="ISS-main">
-        <h5>ISS Info :</h5>
-        <h6>Longitude: {cord.longitude}°</h6>
-        <h6>Latitude: {cord.latitude}°</h6>
-        <h6>velocity:{cord.velocity} km/h</h6>
-        <h6>altitude: {cord.altitude}</h6>
-        <h6>Visibility: {cord.visibility}</h6>
-       
-      </div>
+          <h3>International Space Station Info </h3>
+          <h5>Longitude: {cord?.longitude}°</h5>
+          <h5>Latitude: {cord?.latitude}°</h5>
+          <h5>Velocity: {cord?.velocity} km/h</h5>
+          <h5>Altitude: {cord?.altitude} km</h5>
+          <h5>Visibility: {cord?.visibility}</h5>
+        </div>
       )}
     </>
-    
   );
 };
 
