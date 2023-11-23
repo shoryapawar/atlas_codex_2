@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./responsive.scss";
 
 * {
   margin: 0;
@@ -42,6 +43,8 @@ h1 h2 h3 h4 h5 h6{
 
 .content{
   display: flex;
+
+  
 }
 
 
@@ -62,6 +65,11 @@ h1 h2 h3 h4 h5 h6{
     border-right: 2px solid $soft-bg;
     display: flex;
     // height: 100%;
+
+    @include xl{
+      margin-top: 150px;
+  }
+  
   }
 
   // .main{
