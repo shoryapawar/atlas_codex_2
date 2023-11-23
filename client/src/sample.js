@@ -12,7 +12,7 @@ export const lesson = [
       "galaxy",
     ],
     img: "images/home.png",
-    url: "",
+    url: "/celestial",
     short:
       "Celestial bodies are also termed as heavenly bodies. These are the objects in our space like sun, moon, planets, and many stars. These are forming a part of the vast universe in which we are living. The glorious night sky is having dotted appearance with such objects.",
     description:

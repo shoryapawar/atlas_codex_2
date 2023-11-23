@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { FaWikipediaW, FaReddit} from "react-icons/fa";
+import { FaWikipediaW, FaReddit } from "react-icons/fa";
 import YouTube from "react-youtube";
 import "./spacex.scss";
 
@@ -10,10 +10,14 @@ const SpaceX = () => {
 
   useEffect(() => {
     const fetchSpacexData = async () => {
-      const res = await axios.get(
-        "https://api.spacexdata.com/v5/launches/latest"
-      );
-      setSpacex(res.data);
+      try {
+        const res = await axios.get(
+          "https://api.spacexdata.com/v5/launches/latest"
+        );
+        setSpacex(res.data);
+      } catch (error) {
+        console.error("Error in SpaceX API", error);
+      }
     };
     fetchSpacexData();
   }, []);
