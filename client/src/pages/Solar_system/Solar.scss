@@ -91,3 +91,11 @@
     // background-position: right;
     
 }
+
+.moon{
+    grid-column: span 2;
+    grid-row: span 1;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}

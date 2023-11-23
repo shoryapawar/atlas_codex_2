@@ -36,6 +36,43 @@ export const lesson = [
       "Celestial bodies are also termed as heavenly bodies. These are the objects in our space like sun, moon, planets, and many stars. These are forming a part of the vast universe in which we are living. The glorious night sky is having dotted appearance with such objects.",
     description:
       "Celestial bodies are also termed as heavenly bodies. These are the objects in our space like sun, moon, planets, and many stars. These are forming a part of the vast universe in which we are living. The glorious night sky is having dotted appearance with such objects. When anyone observes them using the telescope, these are looking very fascinating. As these are so far away, we cannot see all of them using our naked eye. Thus we need the telescopes to study them Our universe is containing an amazing collection of celestial objects or astronomical objects. Though most of the observable cosmos is composed of the empty space. Still, this cold, dark void which is sparsely populated by the number of astronomical objects. These are ranging from the common to the bizarre. These are the stuff which is filled with the empty space of the universe. We all are familiar with the stars, planets, and moons. But besides these, many celestial objects, are lying with an amazing collection of other sights.These are colourful nebulae, delicate star clusters as well as the massive galaxies.Pulsars and quasars are further adding to this mystery. Also, the black holes swallow up every bit of the matter which comes too close. This search is on to identify the mysterious, invisible objects termed as dark matter.",
+  }, {
+    id: "0001",
+    title: "Celestial Bodies",
+    content: [
+      "Stars",
+      "planets",
+      "Satellites",
+      "Comets",
+      "Asteriods",
+      "meteors-meteorites",
+      "galaxy",
+    ],
+    img: "images/home.png",
+    url: "",
+    short:
+      "Celestial bodies are also termed as heavenly bodies. These are the objects in our space like sun, moon, planets, and many stars. These are forming a part of the vast universe in which we are living. The glorious night sky is having dotted appearance with such objects.",
+    description:
+      "Celestial bodies are also termed as heavenly bodies. These are the objects in our space like sun, moon, planets, and many stars. These are forming a part of the vast universe in which we are living. The glorious night sky is having dotted appearance with such objects. When anyone observes them using the telescope, these are looking very fascinating. As these are so far away, we cannot see all of them using our naked eye. Thus we need the telescopes to study them Our universe is containing an amazing collection of celestial objects or astronomical objects. Though most of the observable cosmos is composed of the empty space. Still, this cold, dark void which is sparsely populated by the number of astronomical objects. These are ranging from the common to the bizarre. These are the stuff which is filled with the empty space of the universe. We all are familiar with the stars, planets, and moons. But besides these, many celestial objects, are lying with an amazing collection of other sights.These are colourful nebulae, delicate star clusters as well as the massive galaxies.Pulsars and quasars are further adding to this mystery. Also, the black holes swallow up every bit of the matter which comes too close. This search is on to identify the mysterious, invisible objects termed as dark matter.",
+  },
+  {
+    id: "0001",
+    title: "Celestial Bodies",
+    content: [
+      "Stars",
+      "planets",
+      "Satellites",
+      "Comets",
+      "Asteriods",
+      "meteors-meteorites",
+      "galaxy",
+    ],
+    img: "images/home.png",
+    url: "",
+    short:
+      "Celestial bodies are also termed as heavenly bodies. These are the objects in our space like sun, moon, planets, and many stars. These are forming a part of the vast universe in which we are living. The glorious night sky is having dotted appearance with such objects.",
+    description:
+      "Celestial bodies are also termed as heavenly bodies. These are the objects in our space like sun, moon, planets, and many stars. These are forming a part of the vast universe in which we are living. The glorious night sky is having dotted appearance with such objects. When anyone observes them using the telescope, these are looking very fascinating. As these are so far away, we cannot see all of them using our naked eye. Thus we need the telescopes to study them Our universe is containing an amazing collection of celestial objects or astronomical objects. Though most of the observable cosmos is composed of the empty space. Still, this cold, dark void which is sparsely populated by the number of astronomical objects. These are ranging from the common to the bizarre. These are the stuff which is filled with the empty space of the universe. We all are familiar with the stars, planets, and moons. But besides these, many celestial objects, are lying with an amazing collection of other sights.These are colourful nebulae, delicate star clusters as well as the massive galaxies.Pulsars and quasars are further adding to this mystery. Also, the black holes swallow up every bit of the matter which comes too close. This search is on to identify the mysterious, invisible objects termed as dark matter.",
   },
 ];
 

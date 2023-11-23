@@ -5,13 +5,24 @@ const Solar = () => {
   return (
     <div className='solar-content'>
         <h1>Solar System Exploration</h1>
+        <br></br>
         <div className='solar-system'>
         
-        Our solar system has one star, eight planets, five officially recognized dwarf planets, at least 290 moons, more than 1.3 million asteroids, and about 3,900 comets.
+        <p>Our solar system has one star, eight planets, five officially recognized dwarf planets, at least 290 moons, more than 1.3 million asteroids, and about 3,900 comets.</p>
+        <br/>
+        <p>It is located in an outer spiral arm of the Milky Way galaxy called the Orion Arm, or Orion Spur. Our solar system orbits the center of the galaxy at about 515,000 mph (828,000 kph). It takes about 230 million years to complete one orbit around the galactic center.</p>
+        <br/>
+        <p>We call it the solar system because it is made up of our star, the Sun, and everything bound to it by gravity – the planets Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune; dwarf planets Pluto, Ceres, Makemake, Haumea, and Eris – along with hundreds of moons; and millions of asteroids, comets, and meteoroids.</p>
+        <br/>
+        <p>Our solar system is the only one we know of that has a planet that supports life. So far, we only know of life on Earth, but we’re looking for life on other worlds.</p>
         </div>
         {/* <div className='the-sun'>
           <img src='images/Space/sun.jpg'></img> 
         </div> */}
+        <div className='solar-system-gif'>
+          {/* <img className='solar-system-gif1' src='images/Space/solar-system-gif2.gif'></img> */}
+          <img src='images/Space/solar-system-4.gif'></img>
+        </div>
         <div className='solar-cards'>
               <div className='sun'>
                 <>
@@ -36,7 +47,7 @@ const Solar = () => {
                 </div>
 
                 <div className='solar solar2'>
-                <img className='planet-img' src='images/Space/venus.png'></img>
+                <img className='planet-img' src='images/Space/venus1.jpg'></img>
                 <div className='planet-content'>
                   <span className='planet-title'><h3>Venus</h3></span>
                       
@@ -63,7 +74,7 @@ const Solar = () => {
                 </div>
 
                 <div className='solar solar5'>
-                <img className='planet-img' src='images/Space/jupiter.png'></img>
+                <img className='planet-img' src='images/Space/jupiter1.webp'></img>
                 <div className='planet-content'>
                   <span className='planet-title'><h3>Jupiter</h3></span>
                       
@@ -95,6 +106,15 @@ const Solar = () => {
                   <span className='planet-title'><h3>Neptune</h3></span>
                       
                 <p> Neptune - the eighth and most distant major planet orbiting our Sun - is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations. </p>
+                </div>
+                </div>
+
+                <div className='solar moon'>
+                <img className='planet-img' src='images/Space/moon.png'></img>
+                <div className='planet-content'>
+                  <span className='planet-title'><h3>Moon</h3></span>
+                      
+                <p> Chances are that when you imagine the night sky, one of the first things that comes to mind is the Moon “glowing” in the darkness. The Moon has always held a special place in our imaginations and in daily life. </p>
                 </div>
                 </div>
 
