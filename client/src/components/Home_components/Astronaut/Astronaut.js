@@ -22,7 +22,7 @@ const Astronaut = () => {
       {astronauts.map((astronaut) => (
         <div  className="astronaut-list">
           <div className="icon"><img src="images/Space/astronaut.png" alt="o"></img></div>
-        <h6><span className="span"></span>{astronaut.name}</h6>
+        <h6><span className="span"></span>{astronaut?.name}</h6>
         </div>
       ))}
      

@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-
+import "./ISS.scss"
 const ISS2 = () => {
   const [cord, setCord] = useState(null);
   const [loading, setLoading] = useState(true);
