@@ -1,8 +1,7 @@
 import React from "react";
 import "./Home.scss";
 import Astronaut from "../../components/Home_components/Astronaut/Astronaut";
-import APOD from "../../pages/APOD";
-// import ISS from "../../components/Home_components/ISS/ISS";
+import APOD from "../../components/Home_components/APOD"
 import ISS2 from "../../components/Home_components/ISS/ISS-2";
 import ISRO from "../../components/Home_components/ISRO";
 import Rover from "../../components/Home_components/Rover";
@@ -25,7 +24,7 @@ const Home = () => {
         <Rover></Rover>
       </div>
       <div className="box box5">
-        <APOD />
+     <APOD></APOD>
       </div>
       <div className="box box6">
         <Tilt>
