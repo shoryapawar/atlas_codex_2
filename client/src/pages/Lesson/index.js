@@ -19,16 +19,17 @@ const Lesson = () => {
 
     fetchLesson();
   }, []);
-  
+
   const sortedLesson = lesson?.sort((a, b) => a.id - b.id);
 
   return (
     <div className="lesson-main">
+        <h1> Celestial Bodies</h1>
       {sortedLesson?.map((it) => (
         <div key={it.id} className="lesson">
-          <h1>{it.title}</h1>
-          <h3>{it.body}</h3>
           <img src={it.imgurl} alt={it.title} />
+          <h2>{it.title}</h2>
+          <h3>{it.body}</h3>
         </div>
       ))}
     </div>

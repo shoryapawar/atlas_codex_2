@@ -2,7 +2,7 @@
 @import '../../styles/responsive.scss';
 
 .page {
-  margin: 20px;
+  margin: 1rem 2rem;
   /* background-color: #121212; */
   min-height: 100vh;
   display: flex;
@@ -10,6 +10,10 @@
   align-items: center;
   padding: 20px;
   color:whitesmoke;
+  margin-left: 5rem;
+  h1{
+    margin-bottom: 1rem;
+  }
   
 }
 .article {
@@ -51,35 +55,6 @@
 .news-card:hover {
   transform: scale(1.05); /* Scale up on hover for animation */
 }
-
-
-/* .news-card h2 {
-  font-size: 1.25rem;
-  margin: 0;
-}
-
-.news-card p {
-  margin: 10px 0;
-}
-
-.news-card img {
-  width: 100%; 
-  height: auto;
-  max-height: 150px; 
-  object-fit: cover; 
-  margin: 10px 0;
-}
-*/
-/* .news-card a {
-  color: #ff4136;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.news-card a:hover {
-  text-decoration: underline;
-}  */
-
 
 /*  Search box */
 .search-box {
