@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 //css
-import "./APOD.scss";
+import "./APOD.css";
 
 const APOD = () => {
   // const [imageUrl, setImageUrl] = useState('');

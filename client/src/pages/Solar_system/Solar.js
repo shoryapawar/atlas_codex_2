@@ -21,8 +21,8 @@ const Solar = () => {
          
           <img src='images/Space/solar-system-4.gif'></img>
         </div>
-        <div className='solar-cards'>
-              <div className='sun'>
+
+        <div className='sun'>
                 <>
                 <img className='sun-solar-system' src='images/Space/sun-image.webp'></img>
 
@@ -35,6 +35,8 @@ const Solar = () => {
          
                 </div>
                 </div>
+        <div className='solar-cards'>
+             
               <div className='solar solar1'>
                 <img className='planet-img' src='images/Space/mercury.png'></img>
                 <div className='planet-content'>
@@ -105,9 +107,11 @@ const Solar = () => {
                       
                 <p> Neptune - the eighth and most distant major planet orbiting our Sun - is dark, cold and whipped by supersonic winds. It was the first planet located through mathematical calculations. </p>
                 </div>
-                </div>
+                </div>  
 
-                <div className='solar moon'>
+        </div>
+
+        <div className='solar moon'>
                 <img className='planet-img' src='images/Space/moon.png'></img>
                 <div className='planet-content'>
                   <span className='planet-title'><h3>Moon</h3></span>
@@ -115,10 +119,6 @@ const Solar = () => {
                 <p> Chances are that when you imagine the night sky, one of the first things that comes to mind is the Moon “glowing” in the darkness. The Moon has always held a special place in our imaginations and in daily life. </p>
                 </div>
                 </div>
-
-                
-
-        </div>
       </div>  
     
   )

@@ -83,10 +83,11 @@ const Newspage = () => {
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        {article.title}
+                        {article.title.substring(0,25)}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        {article.summary}
+                        { article.summary.substring(0,150) }
+                        {/* {article.summary} */}
                       </Typography>
                     </CardContent>
                     <CardActions>

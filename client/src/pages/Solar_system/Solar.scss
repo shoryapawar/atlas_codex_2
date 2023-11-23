@@ -92,12 +92,17 @@
         align-items: right;
         border-radius: 15px;
         justify-content: space-between;
+
+        @include md{
+            width: 200px;
+            height: 200px;
+            border-radius: none;
+        }
     }
-    // background-color: antiquewhite;
-    // background-image: url("../../../public/images/Space/sun-solar-system.webp");
-    // // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: right;
+    
+    @include md{
+
+    }
     
 }
 
