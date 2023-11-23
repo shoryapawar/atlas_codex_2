@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
 .menu{
 
     position: fixed;
@@ -10,53 +11,85 @@
         // margin-bottom: 10px;
         margin-top: 25px;
         // align-items: center;
-    }
 
-    .title{
-        align-items: center;
-        font-size: 15px;
-        font-weight: 500;
-        color: $soft-color;
+        .title{
+            align-items: center;
+            font-size: 15px;
+            font-weight: 500;
+            color: $soft-color;
 
-    }
-
-    .ListItem{
-        display: flex;
-        align-items: center;
-        gap: 25px;
-        padding: 10px;
-        border-radius: 20px;
-
-        .icon{
-         width: 30px;
-         height: auto; 
-         max-width: 100%; 
-         display: block;
-        //  margin: 0 auto;
+            @include lg{
+                font-size: 12px;
+            }
+    
+            @include md{
+                display: none;
+            }
+    
         }
 
-        &:hover{
-            background-color: $soft-bg;
-              border-bottom: 1px solid $soft-color;
-              color: $soft-color;
 
+        .ListItem{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding: 10px;
+            border-radius: 20px;
+    
+            .icon{
+             width: 30px;
+             height: auto; 
+             max-width: 100%; 
+             display: block;
+            //  margin: 0 auto;
+
+            @include sm{
+                width: 10px;
+            //  height: auto; 
+            }
+            }
+    
+            &:hover{
+                background-color: $soft-bg;
+                  border-bottom: 1px solid $soft-color;
+                  color: $soft-color;
+    
+            }
+    
+            .listitemTitle{
+
+                @include lg{
+                    font-size: 12px;
+                }
+
+                @include md{
+                    display: none;
+                }
+    
+            }
+    
+            
         }
+    
 
         
     }
 
     
 
-    .logo{
+    
+    
 
-        // font-weight: bold;
-        // font-size: large;
-        width: 100px;
-        height: auto; 
-        max-width: 100%; 
-        display: block;
-        margin: 0 auto;
-    }
+    // .logo{
+
+    //     // font-weight: bold;
+    //     // font-size: large;
+    //     width: 100px;
+    //     height: auto; 
+    //     max-width: 100%; 
+    //     display: block;
+    //     margin: 0 auto;
+    // }
 
    
 

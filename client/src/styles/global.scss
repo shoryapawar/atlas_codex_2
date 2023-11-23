@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./responsive.scss";
 
 * {
   margin: 0;
@@ -40,6 +41,8 @@ a {
 
 .content{
   display: flex;
+
+  
 }
 
 

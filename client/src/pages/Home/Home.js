@@ -7,7 +7,7 @@ import ISS2 from "../../components/Home_components/ISS/ISS-2";
 import ISRO from "../../components/Home_components/ISRO";
 import Rover from "../../components/Home_components/Rover";
 import Tilt from 'react-parallax-tilt';
-import { Parallax } from "react-parallax";
+// import { Parallax } from "react-parallax";
 const Home = () => {
   return (
     <div className="home">
