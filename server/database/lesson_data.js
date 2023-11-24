@@ -4,7 +4,7 @@ export default [
       id: 1,
       title: "Description",
       body: "Celestial bodies are also termed as heavenly bodies. These are the objects in our space like sun, moon, planets, and many stars. These are forming a part of the vast universe in which we are living. The glorious night sky is having dotted appearance with such objects. When anyone observes them using the telescope, these are looking very fascinating. As these are so far away, we cannot see all of them using our naked eye. Thus we need the telescopes to study them Our universe is containing an amazing collection of celestial objects or astronomical objects. Though most of the observable cosmos is composed of the empty space. Still, this cold, dark void which is sparsely populated by the number of astronomical objects. These are ranging from the common to the bizarre. These are the stuff which is filled with the empty space of the universe. We all are familiar with the stars, planets, and moons. But besides these, many celestial objects, are lying with an amazing collection of other sights.These are colourful nebulae, delicate star clusters as well as the massive galaxies.Pulsars and quasars are further adding to this mystery. Also, the black holes swallow up every bit of the matter which comes too close. This search is on to identify the mysterious, invisible objects termed as dark matter.",
-      imgurl:"https://t4.ftcdn.net/jpg/06/29/90/85/240_F_629908581_7ItLO9B5ARJljhSZQGshQtd0TqqsIVd3.jpg",  
+      imgurl:"https://t1.gstatic.com/images?q=tbn:ANd9GcTnN3aqFv0pe86QahRP8XbuAPCTixLbhLomLMh7wj20JeqDOL1O",  
     },
     {
         id: 2,
@@ -22,14 +22,14 @@ export default [
         id:4,
         title: "Satellites",
         body: "Satellites are objects that revolve around planets. They form the essential part of the celestial bodies. These may be of natural origin or sent by humans. The moon is a natural satellite of the earth and revolves around it because it is bound by the Earth's gravitational pull. Man has also placed artificial or man-made satellites around the earth and other planets to study them and for communication purposes.A satellite is a moon, planet or machine that orbits a planet or star. For example, Earth is a satellite because it orbits the sun. Likewise, the moon is a satellite because it orbits Earth. Usually, the word “satellite” refers to a machine that is launched into space and moves around Earth or another body in space.Earth and the moon are examples of natural satellites. Thousands of artificial, or man-made, satellites orbit Earth. Some take pictures of the planet that help meteorologists predict weather and track hurricanes. Some take pictures of other planets, the sun, black holes, dark matter or faraway galaxies. These pictures help scientists better understand the solar system and universe.Still other satellites are used mainly for communications, such as beaming TV signals and phone calls around the world. A group of more than 20 satellites make up the Global Positioning System, or GPS. If you have a GPS receiver, these satellites can help figure out your exact location.",
-         imgurl:"https://www.nasa.gov/wp-content/uploads/2015/06/edu_satellites4.jpg"
+         imgurl:"https://t3.gstatic.com/images?q=tbn:ANd9GcRTuofqkmlPETQjU-GHVGN0qtBqye_MpD-XAh6Xjy7HR-iMLdPd"
     },
  
     {  
         id:5,
        title:"Comets",
        body: "These are small chunks of ice and rock that come from the outer edge of the solar system. When its orbit brings it closer to the sun, the ice on them vaporizes, creating a beautiful tail behind them.Comets are mostly found way out in the solar system. Some exist in a wide disk beyond the orbit of Neptune called the Kuiper Belt. We call these short-period comets. They take less than 200 years to orbit the Sun.Other comets live in the Oort Cloud, the sphere-shaped, outer edge of the solar system that is about 50 times farther away from the Sun than the Kuiper Belt. These are called long-period comets because they take much longer to orbit the Sun. The comet with the longest known orbit takes more than 250,000 years to make just one trip around the Sun!.The gravity of a planet or star can pull comets from their homes in the Kuiper Belt or Oort Cloud. This tug can redirect a comet toward the Sun. The paths of these redirected comets look like long, stretched ovals. As the comet is pulled faster and faster toward the Sun, it swings around behind the Sun, then heads back toward where it came from. Some comets dive right into the Sun, never to be seen again. When the comet is in the inner solar system, either coming or going, that's when we may see it in our skies.",
-       imgurl:"https://www.innovationnewsnetwork.com/wp-content/uploads/2021/04/A-Cochran-1005-fig-3.jpg"
+       imgurl:"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTanuX3MsnfxUOSdpfnudFhCphQHm57SXt91PeCnPUi_9bA4eKB"
     },
     {  
        id :6,
