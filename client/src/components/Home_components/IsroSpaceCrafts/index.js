@@ -31,7 +31,7 @@ const IsroSpaceCraft = () => {
     return () => clearInterval(intervalId);
   }, [currentIndex, isrospacecraft?.length]);
 
-  console.log(isrospacecraft);
+  // console.log(isrospacecraft);
   return (
     <div className="spacecraft-main">
       <h1>IsroSpaceCrafts</h1>
@@ -41,7 +41,19 @@ const IsroSpaceCraft = () => {
         isrospacecraft?.length > 0 && (
           <div className="spacecraft-list">
             <h2>Spacecraft - {isrospacecraft[currentIndex]?.name}</h2>
-            <h4>Launch Vechile - {isrospacecraft[currentIndex]?.launchVehicle}</h4>
+            <h4>
+              Launch Vechile - {isrospacecraft[currentIndex]?.launchVehicle}
+            </h4>
+            <button>
+              <a
+                href={isrospacecraft[currentIndex]?.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Mission Link
+              </a>
+            </button>
+            <h4>{isrospacecraft[currentIndex]?.missionStatus}</h4>
           </div>
         )
       )}
