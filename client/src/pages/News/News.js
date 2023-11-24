@@ -35,7 +35,6 @@ const Newspage = () => {
         setLoading(false);
       });
   }, [search]);
-
   // gsap code
   const el = useRef();
   const tl = useRef();
@@ -73,8 +72,8 @@ const Newspage = () => {
             </div>
 
             <div className="article">
-              {articleRes.map((article) => (
-                <div key={article.id} className="news-card">
+              {articleRes?.map((article) => (
+                <div key={article?.id} className="news-card">
                   <Card sx={{ maxWidth: 345 }}>
                     <CardMedia
                       sx={{ height: 140 }}
@@ -83,10 +82,10 @@ const Newspage = () => {
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        {article.title.substring(0,25)}
+                        {article.title}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        { article.summary.substring(0,150) }
+                        { article.summary}
                         {/* {article.summary} */}
                       </Typography>
                     </CardContent>
@@ -96,7 +95,7 @@ const Newspage = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Button src={article.url} size="small">
+                        <Button src={article?.url} size="small">
                           Know More
                         </Button>
                       </a>

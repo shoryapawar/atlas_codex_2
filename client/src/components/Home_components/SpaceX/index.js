@@ -39,19 +39,19 @@ const SpaceX = () => {
             <img src={spacex?.links?.patch.small} alt="SpaceX" />
           </div>
           <div className="links-container">
-            <Link
+            <Link 
               to={spacex?.links?.reddit.launch}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaReddit />
+              <FaReddit className="Link" />
             </Link>
-            <Link
+            <Link 
               to={spacex?.links?.wikipedia}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaWikipediaW />
+              <FaWikipediaW className="Link" />
             </Link>
           </div>
         </div>

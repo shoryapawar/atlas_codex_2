@@ -1,0 +1,18 @@
+.spacecraft-main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1rem;
+    .spacecraft-list{
+        display: flex;
+       margin-top:2rem;
+        flex-direction: column;
+        gap: 3px;
+        button{
+            align-self: center;
+            height: 1.5rem;
+            width: 10rem;
+        }
+    }
+}

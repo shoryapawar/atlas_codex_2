@@ -17,19 +17,21 @@ const Rover = () => {
         const response = await axios.get(
           `https://api.nasa.gov/mars-photos/api/v1/manifests/${selectedRover}?api_key=aZndzgM8ONTa2rwcDrUDdhl19mtNKhWTBMWoaz8g`
         );
-        setMaxSol(response.data.photo_manifest.max_sol);
+        setMaxSol(response?.data.photo_manifest.max_sol);
       } catch (error) {
         console.error("Error fetching maxSol", error);
       }
     };
-      
+
     fetchMaxSol();
   }, [selectedRover]);
   //  console.log(maxSol);
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `https://api.nasa.gov/mars-photos/api/v1/rovers/${selectedRover}/photos?sol=${sol>0?sol :4003}&api_key=aZndzgM8ONTa2rwcDrUDdhl19mtNKhWTBMWoaz8g`
+        `https://api.nasa.gov/mars-photos/api/v1/rovers/${selectedRover}/photos?sol=${
+          sol > 0 ? sol : 4003
+        }&api_key=aZndzgM8ONTa2rwcDrUDdhl19mtNKhWTBMWoaz8g`
       );
       setRoverimg(response.data.photos);
       setLoading(false);
@@ -41,7 +43,7 @@ const Rover = () => {
 
   useEffect(() => {
     fetchData();
-  }, [selectedRover]);
+  }, [selectedRover, sol]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -89,7 +91,6 @@ const Rover = () => {
             value={sol}
             onChange={handleSolChange}
           />
-          {/* <input placeholder="Enter Sol" type="text" value={sol}></input> */}
         </div>
       </div>
       <div className="right-content">

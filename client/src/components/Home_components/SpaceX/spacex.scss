@@ -8,27 +8,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 400px;
+    max-width: 50rem;
     padding: 20px;
+    gap: 5rem;
   }
   
   .image-container img {
-    max-width: 100px;
+    max-width: 50rem;
   }
   
   .links-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-  }
-  
-  .link {
-    font-size: px; /* Adjust the font size as needed */
-    color: #7f1616; /* Adjust the color as needed */
+    gap: 2rem;
+
+    .Link{
+      width: 3rem;
+      height: auto;
+    }
+    
   }
   
   .yt {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
