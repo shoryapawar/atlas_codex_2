@@ -18,9 +18,11 @@ export const useFetchQuestion = () => {
     apiData: [],
     serverError: null,
   });
+  const [selectedAnswers, setSelectedAnswers] = useState([]);
 
   useEffect(() => {
     setGetData((prev) => ({ ...prev, isLoading: true }));
+   
 
     /** async function fetch backend data */
     (async () => {
@@ -37,19 +39,21 @@ export const useFetchQuestion = () => {
           // Get the first 10 shuffled questions and answers
           const selectedData = shuffledData.slice(0, 10);
 
-          const selectedQuestions = selectedData.map((q) => q.question);
+           const selectedQuestions = selectedData.map((q) => q.question);
+
           const selectedAnswers = selectedData.map((q) => q.answer); 
-        //   console.log(selectedQuestions);
-        //   console.log(selectedAnswers);
+       
+          //console.log(selectedQuestions);
+          //console.log(selectedAnswers);
           setGetData((prev) => ({ ...prev, isLoading: false }));
           setGetData((prev) => ({
             ...prev,
             apiData: selectedQuestions,
             selectedAnswers,
           }));
-
+          setSelectedAnswers(selectedAnswers);
           /** dispatch an action */
-          dispatch(Action.startExamAction({ question: selectedQuestions, answers }));
+          dispatch(Action.startExamAction({ question: selectedQuestions, answers : selectedAnswers}));
         } else {
           throw new Error("No Question Available");
         }
@@ -60,8 +64,11 @@ export const useFetchQuestion = () => {
     })();
   }, [dispatch]);
 
-  return [getData, setGetData];
+  
+
+  return [getData, setGetData , selectedAnswers];
 };
+
 
 /*************Move Action Dispatch Function **************** */
 
@@ -95,3 +102,5 @@ const shuffleArrays = (questions, answers) => {
   }
   return shuffledData;
 };
+
+

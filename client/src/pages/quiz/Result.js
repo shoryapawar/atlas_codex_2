@@ -11,15 +11,18 @@ import { resetAllAction } from './redux/question_reducer';
 import { usePublishResult } from './Hooks/setResult';
 import { attempts_Number, earnPoints_Number, flagResult } from './helper/helper';
 
+
 export default function Result() {
 
    const dispatch = useDispatch();
 
    const { questions: { queue, answers }, result: { result, userId } } = useSelector(state => state);
+   
 
    useEffect(() => {
       console.log(flag);
    })
+   
 
    const totalPoints = queue.length * 10;
    const attempts = attempts_Number(result);

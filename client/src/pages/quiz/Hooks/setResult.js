@@ -4,8 +4,9 @@ import { postServerData } from '../helper/helper';
 
 export const PushAnswer = (result) => async(dispatch) => {
    try{
-     
+        
          await dispatch(Action.pushResultAction(result))
+         //console.log(result);
      
    }catch(error){
     console.log(error);
