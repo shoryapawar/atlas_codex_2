@@ -1,85 +1,71 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
+import { MdOutlineSatelliteAlt } from "react-icons/md";
 
-
-
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 
 /**********Custom Hooks ******************/
 import { useFetchQuestion } from "./Hooks/FetchQuestion";
-import {updateResult} from "./Hooks/setResult";
+import { updateResult } from "./Hooks/setResult";
 // import { updateResultAction } from './redux/result_reducer';
 
+export default function Question({ onChecked }) {
+  const [checked, setChecked] = useState(undefined);
 
-export default function Question( {onChecked}) {
+  const { trace } = useSelector((state) => state.questions);
+  const result = useSelector((state) => state.result.result);
 
-    const [checked , setChecked] =  useState(undefined);
+  const [{ isLoading, apiData, serverError }] = useFetchQuestion();
 
-    const {trace} = useSelector(state => state.questions);
-    const result = useSelector(state => state.result.result);
+  //useSelector(state => console.log(state));
 
+  const questions = useSelector(
+    (state) => state.questions.queue[state.questions.trace]
+  );
+  const dispatch = useDispatch();
 
-    const [{ isLoading, apiData, serverError}] = useFetchQuestion() ;
+  useEffect(() => {
+    dispatch(updateResult({ trace, checked }));
+  }, [checked]);
 
-    //useSelector(state => console.log(state));
+  function onSelect(i) {
+    onChecked(i);
+    setChecked(i);
+    dispatch(updateResult({ trace, checked }));
+  }
 
-    const questions = useSelector(state =>state.questions.queue[state.questions.trace]);
-    const dispatch = useDispatch()
-
-    useEffect(() =>{
-        dispatch(updateResult(  {trace , checked} ))
-    } ,[checked] )
-    
-    function onSelect(i){
-    
-      onChecked(i);
-      setChecked(i);
-      dispatch(updateResult(  {trace , checked} ))
-    }
-
-    if(isLoading) return <h3 className='text-light'> isLoading</h3>
-    if(serverError) return <h3 className='text-light'> {serverError || "Unknown Error"}</h3>
-  
+  if (isLoading)
     return (
-    <div className='questions'>
-        <h2 className='text-light'>
+      <p className="loading">
+        <MdOutlineSatelliteAlt className="logo_stalelite" /> Loading...
+        <span className="loading-ring"></span>
+      </p>
+    );
+  if (serverError)
+    return <h3 className="text-light"> {serverError || "Unknown Error"}</h3>;
 
-       
-            {questions?.question}  
-        </h2>
+  return (
+    <div className="questions">
+      <h2 className="text-light">{questions?.question}</h2>
 
-        <ul key={questions?.id}>
-           {
-            questions?.options.map((q , i) =>(
-            <li key={i}>
-                <input 
-                type='radio' 
-                value={false} 
-                name='options' 
-                id = {`q${i}-option`}
-                onChange={() => onSelect(i)}    
-                />
-                <label className="text-primary" htmlFor={`q${i}-option`}>{q}</label>
-                <div className= {`check ${result[trace] === i ? 'checked' : ''} `}></div>
-
-
-            </li>
-            ) )
-           }
-        </ul>
+      <ul key={questions?.id}>
+        {questions?.options.map((q, i) => (
+          <li key={i}>
+            <input
+              type="radio"
+              value={false}
+              name="options"
+              id={`q${i}-option`}
+              onChange={() => onSelect(i)}
+            />
+            <label className="text-primary" htmlFor={`q${i}-option`}>
+              {q}
+            </label>
+            <div
+              className={`check ${result[trace] === i ? "checked" : ""} `}
+            ></div>
+          </li>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }
-
-
-
-
-
-
-
-
- 
-
-
-
- 
-

@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import { useEffect, useState, useLayoutEffect, useRef } from "react";
 import axios from "axios";
 import "./News.scss";
+import { MdOutlineSatelliteAlt } from "react-icons/md";
 // gsap
 import { gsap } from "gsap";
 const Newspage = () => {
@@ -47,7 +48,7 @@ const Newspage = () => {
         scale: 0,
         opacity: 0,
         duration: 0.8,
-        delay: 0.3,
+        delay: 0.4,
       });
     }, el);
   }, [loading]);
@@ -56,7 +57,9 @@ const Newspage = () => {
     <>
       <div className="page" ref={el}>
         {loading ? (
-          <p className="loading">Loading....</p>
+          <p className="loading">
+             <MdOutlineSatelliteAlt  className="logo_stalelite"/>  Loading...<span className="loading-ring"></span>
+          </p>
         ) : (
           <div>
             <h1 style={{ color: "white" }}> Space News and Articles </h1>
@@ -85,7 +88,7 @@ const Newspage = () => {
                         {article.title}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        { article.summary}
+                        {article.summary}
                         {/* {article.summary} */}
                       </Typography>
                     </CardContent>
