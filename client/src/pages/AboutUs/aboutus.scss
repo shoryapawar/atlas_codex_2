@@ -1,22 +1,68 @@
-@import "../../styles/variables.scss";
-.about-main{
-  min-height: 100vh;
-  
+// @import "../../styles/variables.scss";
+// .about-main{
+//   min-height: 100vh;
 
+// }
+
+// .member{
+//     display: flex ;
+//     color: white;
+//     border: 1px solid black;
+//     margin: 20px;
+//     background-color: $dark-bg;
+//     gap: 10px;
+//     align-items: center;
+//     border-radius: 10px;
+//     img{
+//         width: 200px;
+//         height: 200px;
+//         border-radius: 50%;
+//     }
+// }
+@import "../../styles/variables.scss";
+.about-main {
+  min-height: 100vh;
+  margin-left: 2rem;
+}
+.team {
+  margin-left: 1rem;
+}
+.member {
+  display: flex;
+  margin-left: 1rem;
+  color: white;
+  border: 1px solid black;
+  margin: 20px;
+  background-color: rgb(42, 52, 71, 0.5);
+
+  gap: 10px;
+  align-items: center;
+  border-radius: 10px;
+  img {
+  margin-left: 1rem;
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
 }
 
-.member{
-    display: flex ;
-    color: white;
-    border: 1px solid black;
-    margin: 20px;
-    background-color: $dark-bg;
-    gap: 10px;
-    align-items: center;
-    border-radius: 10px;
-    img{
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-    }
+h1 {
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.memver-content {
+  margin-left: 1rem;
+
+  display: flex;
+  // flex-direction: row;
+  flex-direction: column;
+}
+
+.FaGithub {
+  margin-top: 2rem;
+
+  width: 50px;
 }
