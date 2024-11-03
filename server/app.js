@@ -8,7 +8,8 @@ import lessonRoute from "./routes/lesson_routes.js";
 
 
 export const app = express();
-
+// make a folder with name data and make a file config.env and add all api keys  in this file
+// copy env variable names from readme file
 config({
   path: "./data/config.env",
 });
